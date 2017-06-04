@@ -40,11 +40,23 @@ illustrated within the app are:
 
 If you actually want to run this sample app (though it is mostly provided so you
 can read the code), you will need to register an OAuth 2.0 client for the
-package `com.google.android.gms.drive.sample.demo` with your own debug keys
+package `${applicationId}` with your own debug keys
 and set any resource IDs to those that you have access to. Resource ID definitions
 are on:
 
-* com.google.android.gms.drive.sample.demo.BaseDemoActivity.EXISTING_FOLDER_ID
-* com.google.android.gms.drive.sample.demo.BaseDemoActivity.EXISTING_FILE_ID
+* ${applicationId}.BaseDemoActivity.EXISTING_FOLDER_ID
+* ${applicationId}.BaseDemoActivity.EXISTING_FILE_ID
 
 ![Analytics](https://ga-beacon.appspot.com/UA-46884138-1/android-demos?pixel)
+
+
+To enable OAuth 2.0, follow this guide: 
+https://developers.google.com/identity/protocols/OAuth2
+
+You'll need your debug keystore, it's here:
+- linux: ~/.android/debug.keystore
+- win: C:\User\YourUser\.android\debug.keystore
+
+keytool -exportcert -keystore ~/.android/debug.keystore -list -v
+
+
